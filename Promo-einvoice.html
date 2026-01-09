@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI帶你了解雲端發票：雲端發票／手機條碼入門與常見問題。" />
+  <title>AI帶你了解雲端發票｜內湖分處</title>
+  <style>
+    :root{--bg:#f8fafc;--card:#fff;--muted:#64748b;--text:#0f172a;--line:#e2e8f0;--brand:#0f172a;--ok:#16a34a;--shadow:0 1px 2px rgba(15,23,42,.06),0 12px 30px rgba(15,23,42,.08);--r:18px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+    .hidden{display:none}
+
+    .top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(226,232,240,.8)}
+    .top .inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:40px;height:40px;border-radius:14px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:900;font-size:12px}
+    .brand h1{margin:0;font-size:14px;line-height:1.2}
+    .brand p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+
+    .nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .btn{border:1px solid var(--line);background:#fff;border-radius:14px;padding:10px 12px;font-size:13px;font-weight:800;box-shadow:0 1px 2px rgba(15,23,42,.05);cursor:pointer}
+    .btn.primary{border-color:transparent;background:var(--brand);color:#fff}
+    .menuBtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;border:1px solid var(--line);background:#fff;box-shadow:0 1px 2px rgba(15,23,42,.05);cursor:pointer}
+    .menuBtn svg{width:20px;height:20px}
+
+    .navDesktop{display:none}
+    .navMobile{border-top:1px solid rgba(226,232,240,.9);background:#fff}
+    .navMobile .grid{display:grid;gap:8px;padding:12px 0}
+    .navLink{border:1px solid var(--line);background:#fff;border-radius:14px;padding:10px 12px;font-size:13px;font-weight:800;color:var(--text)}
+
+    .hero{padding:18px 0 10px}
+    .heroCard{background:linear-gradient(135deg,#ffffff,#eef2ff);border:1px solid var(--line);border-radius:calc(var(--r) + 10px);box-shadow:var(--shadow);padding:18px}
+    .crumb{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--muted)}
+    .crumb a{text-decoration:underline}
+    .tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px;font-size:12px;color:var(--muted);width:fit-content}
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--ok)}
+    h2{margin:10px 0 0;font-size:26px;letter-spacing:-.02em}
+    .sub{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.65}
+
+    .section{padding:14px 0 26px}
+    .grid{display:grid;gap:12px;grid-template-columns:1fr}
+    .card{background:#fff;border:1px solid var(--line);border-radius:calc(var(--r) + 8px);box-shadow:var(--shadow);padding:16px}
+    .card h3{margin:0 0 10px;font-size:15px;font-weight:1000}
+    .muted{color:var(--muted);font-size:13px;line-height:1.7}
+    .list{margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.75}
+    .list b{color:var(--text)}
+
+    footer{border-top:1px solid rgba(226,232,240,.9);background:#fff}
+    .foot{padding:18px 0;color:var(--muted);font-size:12px;line-height:1.6}
+
+    @media (min-width: 860px){
+      .navDesktop{display:flex}
+      .menuBtn{display:none}
+      .grid{grid-template-columns:1fr 1fr}
+      h2{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="inner">
+        <a class="brand" href="index.html" title="回首頁">
+          <div class="logo">內湖</div>
+          <div>
+            <h1>臺北市稅捐稽徵處｜內湖分處</h1>
+            <p>AI帶你了解雲端發票</p>
+          </div>
+        </a>
+
+        <nav class="nav navDesktop" aria-label="主選單">
+          <a class="btn" href="index.html">首頁</a>
+          <a class="btn" href="items.html">宣導品品項</a>
+          <a class="btn primary" href="promo.html">宣導專區</a>
+          <a class="btn" href="schedule.html">租稅宣導期程</a>
+          <a class="btn" href="gallery.html">宣導成果回顧</a>
+          <a class="btn" href="contact.html">聯絡資訊</a>
+        </nav>
+
+        <button class="menuBtn" id="menuBtn" aria-label="開啟選單" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6.5h16a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2Zm0 6h16a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2Zm0 6h16a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2Z"/></svg>
+        </button>
+      </div>
+
+      <div class="navMobile hidden" id="mobileMenu">
+        <div class="grid">
+          <a class="navLink" href="index.html">首頁</a>
+          <a class="navLink" href="items.html">宣導品品項</a>
+          <a class="navLink" href="promo.html">宣導專區</a>
+          <a class="navLink" href="schedule.html">租稅宣導期程</a>
+          <a class="navLink" href="gallery.html">宣導成果回顧</a>
+          <a class="navLink" href="contact.html">聯絡資訊</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="heroCard">
+          <div class="crumb">宣導專區 ＞ <a href="promo.html">子頁面列表</a> ＞ AI帶你了解雲端發票</div>
+          <div style="height:10px"></div>
+          <div class="tag"><span class="dot"></span> 雲端發票／手機條碼</div>
+          <h2>AI帶你了解雲端發票</h2>
+          <p class="sub">這頁先做成「版面＋清單」範本，你之後只要把內容補上（文字、影片、連結）就能直接上線。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="grid">
+          <div class="card">
+            <h3>快速導覽（可改）</h3>
+            <ul class="list">
+              <li><b>手機條碼</b>：申請／綁定／更換手機</li>
+              <li><b>雲端發票</b>：載具、歸戶、捐贈、對獎</li>
+              <li><b>常見問題</b>：APP 閃退、無法登入、看不到發票</li>
+            </ul>
+            <p class="muted" style="margin:10px 0 0">你如果要做成像「影片牆」，我也可以幫你加上 YouTube 嵌入格子。</p>
+          </div>
+
+          <div class="card">
+            <h3>內容待補（你可以貼資料給我）</h3>
+            <p class="muted" style="margin:0">你之後只要把：</p>
+            <ul class="list">
+              <li>教學影片網址（YouTube）</li>
+              <li>宣導海報圖片（放到 assets/ 底下）</li>
+              <li>官方連結（例如：稅務入口網、地方稅網路申報等）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div><b>臺北市稅捐稽徵處｜內湖分處</b>　AI帶你了解雲端發票</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
