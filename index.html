@@ -72,6 +72,23 @@
     .list{margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.7}
     .mini{background:#fff;border:1px solid var(--line);border-radius:calc(var(--r) + 8px);box-shadow:var(--shadow);padding:16px}
 
+    /* ===== Bottom: 好站推薦 + 聯絡資訊 ===== */
+    .bottomBand{background:#e6eef0;border-top:1px solid rgba(226,232,240,.9);padding:22px 0}
+    .bottomTitle{margin:0 0 10px;font-size:18px;font-weight:900;letter-spacing:-.01em;color:var(--text)}
+
+    .siteGrid{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .siteCard{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+    .siteLogo{height:92px;display:grid;place-items:center;background:#fff}
+    .siteLogo .mark{width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,#0f172a,#334155);color:#fff;display:grid;place-items:center;font-weight:1000;letter-spacing:.08em;font-size:12px}
+    .siteName{padding:10px 12px;font-size:13px;font-weight:900;color:#0f172a;border-top:1px solid rgba(226,232,240,.9)}
+    .siteCard:hover{filter:brightness(.99)}
+
+    .infoGrid{margin-top:16px;display:grid;gap:12px;grid-template-columns:1fr}
+    .infoBox{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:16px}
+    .infoBox h4{margin:0 0 10px;font-size:14px;font-weight:900}
+    .infoList{margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.75}
+    .infoList b{color:var(--text)}
+
     footer{border-top:1px solid rgba(226,232,240,.9);background:#fff}
     .foot{padding:18px 0;color:var(--muted);font-size:12px;line-height:1.6}
 
@@ -81,6 +98,8 @@
       .cards{grid-template-columns: repeat(3, minmax(0, 1fr))}
       .split{grid-template-columns: 1.2fr .8fr}
       h2{font-size:34px}
+      .siteGrid{grid-template-columns:repeat(5,minmax(0,1fr))}
+      .infoGrid{grid-template-columns:1.1fr .9fr}
     }
   </style>
 </head>
@@ -232,6 +251,55 @@
       </div>
     </section>
   </main>
+
+  <!-- 首頁最下面：好站推薦 + 聯絡資訊 -->
+  <section class="bottomBand" id="recommended">
+    <div class="wrap">
+      <h3 class="bottomTitle">好站推薦：</h3>
+      <div class="siteGrid">
+        <a class="siteCard" href="https://tpctax.gov.taipei/" target="_blank" rel="noopener">
+          <div class="siteLogo"><div class="mark">TRS</div></div>
+          <div class="siteName">臺北市稅捐稽徵處</div>
+        </a>
+        <a class="siteCard" href="https://english.tpctax.gov.taipei/" target="_blank" rel="noopener">
+          <div class="siteLogo"><div class="mark">EN</div></div>
+          <div class="siteName">Taipei City Revenue Service</div>
+        </a>
+        <a class="siteCard" href="https://net.tax.nat.gov.tw/PLRX/Lrx200d01/" target="_blank" rel="noopener">
+          <div class="siteLogo"><div class="mark">NET</div></div>
+          <div class="siteName">地方稅網路申報作業</div>
+        </a>
+        <a class="siteCard" href="https://www.etax.nat.gov.tw/etwmain/" target="_blank" rel="noopener">
+          <div class="siteLogo"><div class="mark">eTax</div></div>
+          <div class="siteName">財政部稅務入口網</div>
+        </a>
+        <a class="siteCard" href="https://tpctax.gov.taipei/Content_List.aspx?n=CD076BAD018F7557" target="_blank" rel="noopener">
+          <div class="siteLogo"><div class="mark">LAW</div></div>
+          <div class="siteName">地方稅法規</div>
+        </a>
+      </div>
+
+      <div class="infoGrid">
+        <div class="infoBox">
+          <h4>聯絡資訊：</h4>
+          <ul class="infoList">
+            <li>總處電話：<b>(02)2394-9211</b>　總處傳真：<b>(02)2351-4382</b></li>
+            <li>國稅與地方稅免付費電話：<b>0800-000-321</b>（限辦公時間提供服務）</li>
+            <li>上班時間：星期一至星期五 <b>08:30–12:30</b>、<b>13:30–17:30</b></li>
+            <li>服務櫃檯服務時間：<b>08:30–17:30</b></li>
+          </ul>
+        </div>
+        <div class="infoBox">
+          <h4>更多：</h4>
+          <ul class="infoList">
+            <li><a href="#" style="text-decoration:underline">全功能服務櫃檯服務項目（可換成你的連結）</a></li>
+            <li><a href="#" style="text-decoration:underline">全功能服務櫃檯地點（可換成你的連結）</a></li>
+            <li>（可加）分處地址、交通方式、停車資訊</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="wrap">
