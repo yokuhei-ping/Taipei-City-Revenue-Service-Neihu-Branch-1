@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="內湖分處｜宣導專區：可直接在頁面播放 YouTube 教學影片。" />
-  <title>內湖分處｜宣導專區（YouTube 教學）</title>
+  <meta name="description" content="內湖分處｜宣導專區入口：稅務申辦教你做、AI帶你了解雲端發票、稅務宣導。" />
+  <title>內湖分處｜宣導專區</title>
   <style>
     :root{
       --bg:#f8fafc; --card:#ffffff; --muted:#64748b; --text:#0f172a; --line:#e2e8f0;
@@ -48,24 +48,21 @@
     h2{margin:10px 0 0;font-size:26px;letter-spacing:-.02em}
     .sub{margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.65}
 
-    /* Video grid */
+    /* Cards */
     .section{padding:14px 0 26px}
     .sectionTitle{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap}
     .sectionTitle h3{margin:0;font-size:16px;letter-spacing:-.01em}
     .sectionTitle p{margin:6px 0 0;font-size:13px;color:var(--muted)}
 
-    .videoGrid{display:grid;gap:14px;margin-top:12px;grid-template-columns: 1fr}
-    .videoCard{background:#fff;border:1px solid var(--line);border-radius:calc(var(--r) + 8px);box-shadow:var(--shadow);overflow:hidden}
+    .cards{display:grid;gap:12px;margin-top:12px;grid-template-columns:1fr}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:calc(var(--r) + 8px);box-shadow:var(--shadow);padding:16px;display:grid;gap:10px}
+    .cardTop{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .cardName{font-weight:1000;letter-spacing:-.01em}
+    .badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:1px solid var(--line);background:#fff;padding:6px 10px;font-size:12px;color:var(--muted);font-weight:900;white-space:nowrap}
+    .cardDesc{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
 
-    /* 16:9 響應式容器 */
-    .ratio{position:relative;width:100%;padding-top:56.25%;background:#0b1220}
-    .ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-
-    .videoBody{padding:14px 14px 16px;display:grid;gap:8px}
-    .videoTitle{font-weight:900;letter-spacing:-.01em}
-    .videoDesc{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
-    .metaRow{display:flex;gap:8px;flex-wrap:wrap}
-    .badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:1px solid var(--line);background:#fff;padding:6px 10px;font-size:12px;color:var(--muted);font-weight:900}
+    .note{background:#fff;border:1px dashed rgba(148,163,184,.8);border-radius:calc(var(--r) + 8px);padding:14px;color:var(--muted);font-size:13px;line-height:1.7}
+    .note a{text-decoration:underline}
 
     footer{border-top:1px solid rgba(226,232,240,.9);background:#fff}
     .foot{padding:18px 0;color:var(--muted);font-size:12px;line-height:1.6}
@@ -73,7 +70,7 @@
     @media (min-width: 860px){
       .navDesktop{display:flex}
       .menuBtn{display:none}
-      .videoGrid{grid-template-columns: 1fr 1fr}
+      .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
       h2{font-size:34px}
     }
   </style>
@@ -87,7 +84,7 @@
           <div class="logo">內湖</div>
           <div>
             <h1>臺北市稅捐稽徵處｜內湖分處</h1>
-            <p>宣導專區（可直接播放 YouTube）</p>
+            <p>宣導專區（入口）</p>
           </div>
         </a>
 
@@ -122,9 +119,9 @@
     <section class="hero">
       <div class="wrap">
         <div class="heroCard">
-          <div class="tag"><span class="dot"></span> 稅務申辦教你做～</div>
-          <h2>稅務入口網專區</h2>
-          <p class="sub">像你截圖那樣「直接在頁面播放 YouTube」。你只要把下面的影片網址換成你要的 YouTube 連結就行（watch / youtu.be 都可以）。</p>
+          <div class="tag"><span class="dot"></span> 宣導專區</div>
+          <h2>稅務教學與宣導資源</h2>
+          <p class="sub">宣導專區分成 3 個子頁面：<b>稅務申辦教你做～</b>、<b>AI帶你了解雲端發票</b>、<b>稅務宣導</b>。請點下方卡片進入。</p>
         </div>
       </div>
     </section>
@@ -133,12 +130,40 @@
       <div class="wrap">
         <div class="sectionTitle">
           <div>
-            <h3>教學影片</h3>
-            <p>桌機會一排兩部；手機會自動變成一排一部，版面不會跑掉。</p>
+            <h3>三個子頁面</h3>
+            <p>建議：每個子頁面只放同一主題的內容，民眾比較好找。</p>
           </div>
         </div>
 
-        <div class="videoGrid" id="videoGrid"></div>
+        <div class="cards">
+          <a class="card" href="promo-howto.html">
+            <div class="cardTop">
+              <div class="cardName">稅務申辦教你做～</div>
+              <span class="badge">YouTube 可直接播放</span>
+            </div>
+            <p class="cardDesc">稅務入口網專區：申請地價稅課稅明細表、申請財產查詢清單（直接在頁面播放影片）。</p>
+          </a>
+
+          <a class="card" href="promo-einvoice.html">
+            <div class="cardTop">
+              <div class="cardName">AI帶你了解雲端發票</div>
+              <span class="badge">雲端發票／手機條碼</span>
+            </div>
+            <p class="cardDesc">放置雲端發票入門、手機條碼申請、常見問題與教學影片（可再補內容）。</p>
+          </a>
+
+          <a class="card" href="promo-taxedu.html">
+            <div class="cardTop">
+              <div class="cardName">稅務宣導</div>
+              <span class="badge">懶人包／常見問答</span>
+            </div>
+            <p class="cardDesc">地方稅常見問題、申報／繳納提醒、宣導素材下載（可再補內容）。</p>
+          </a>
+        </div>
+
+        <div class="note" style="margin-top:12px">
+          你也可以在 <a href="contact.html">聯絡資訊</a> 放「內湖分處｜服務資訊（電話/時間/Email）」；宣導頁面就保持乾淨，只放教學內容。
+        </div>
       </div>
     </section>
   </main>
@@ -146,96 +171,16 @@
   <footer>
     <div class="wrap">
       <div class="foot">
-        <div><b>臺北市稅捐稽徵處｜內湖分處</b>　宣導專區（YouTube 嵌入範本）</div>
-        <div>若影片顯示「Video unavailable」，代表該影片作者關閉了嵌入功能，需改用允許嵌入的影片。</div>
+        <div><b>臺北市稅捐稽徵處｜內湖分處</b>　宣導專區（入口）</div>
       </div>
     </div>
   </footer>
 
   <script>
-    // ✅ 你只要改這裡：把 url 換成你的 YouTube 影片連結
-    // 支援：
-    // - https://www.youtube.com/watch?v=影片ID
-    // - https://youtu.be/影片ID
-    // - https://www.youtube.com/shorts/影片ID
-    const videos = [
-      {
-        title: '線上申辦指引｜民眾如何利用網路申請地價稅明細表',
-        url: 'https://www.youtube.com/watch?v=VIDEO_ID_1',
-        tag: '線上申辦',
-        desc: '示範如何透過稅務入口網線上申辦與下載明細。'
-      },
-      {
-        title: '線上申辦指引｜民眾如何利用網路查調財產清單',
-        url: 'https://www.youtube.com/watch?v=VIDEO_ID_2',
-        tag: '線上申辦',
-        desc: '示範如何線上查詢與下載財產清單。'
-      },
-    ];
-
-    function getVideoId(url){
-      try{
-        const u = new URL(url);
-        // watch?v=
-        const v = u.searchParams.get('v');
-        if(v) return v;
-        // youtu.be/ID
-        if(u.hostname.includes('youtu.be')){
-          return u.pathname.split('/').filter(Boolean)[0] || '';
-        }
-        // /shorts/ID
-        const parts = u.pathname.split('/').filter(Boolean);
-        const idx = parts.indexOf('shorts');
-        if(idx >= 0 && parts[idx+1]) return parts[idx+1];
-        // /embed/ID
-        const eidx = parts.indexOf('embed');
-        if(eidx >= 0 && parts[eidx+1]) return parts[eidx+1];
-        return '';
-      }catch{
-        return '';
-      }
-    }
-
-    function render(){
-      const grid = document.getElementById('videoGrid');
-      grid.innerHTML = videos.map(v => {
-        const id = getVideoId(v.url);
-        const embed = id ? `https://www.youtube.com/embed/${id}` : '';
-        return `
-          <article class="videoCard">
-            <div class="ratio">
-              ${embed ? `<iframe src="${embed}" title="${escapeHtml(v.title)}" loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>` : `<div style="position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-weight:900">請填入正確 YouTube 連結</div>`}
-            </div>
-            <div class="videoBody">
-              <div class="videoTitle">${escapeHtml(v.title)}</div>
-              <div class="metaRow">
-                ${v.tag ? `<span class="badge">${escapeHtml(v.tag)}</span>` : ''}
-                <a class="badge" href="${v.url}" target="_blank" rel="noopener">在 YouTube 開啟</a>
-              </div>
-              ${v.desc ? `<p class="videoDesc">${escapeHtml(v.desc)}</p>` : ''}
-            </div>
-          </article>
-        `;
-      }).join('');
-    }
-
-    function escapeHtml(str){
-      return String(str)
-        .replaceAll('&','&amp;')
-        .replaceAll('<','&lt;')
-        .replaceAll('>','&gt;')
-        .replaceAll('"','&quot;')
-        .replaceAll("'",'&#039;');
-    }
-
     // 手機選單
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-    render();
   </script>
 </body>
 </html>
