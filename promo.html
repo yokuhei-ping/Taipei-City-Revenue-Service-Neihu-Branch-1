@@ -31,6 +31,40 @@
     .btn.primary{border-color:transparent;background:var(--brand);color:#fff}
     .btn:hover{filter:brightness(.98)}
 
+
+/* Dropdown（宣導專區下拉） */
+.drop{position:relative}
+.dropBtn{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.dropMenu{
+  position:absolute; top:calc(100% + 10px); left:0;
+  min-width:260px;
+  background:#fff; border:1px solid var(--line);
+  border-radius:16px; box-shadow:var(--shadow);
+  padding:8px; display:none;
+  z-index:80;
+}
+.drop.open .dropMenu,
+.drop:hover .dropMenu,
+.drop:focus-within .dropMenu{display:block}
+
+.dropTitle{
+  padding:8px 12px 6px;
+  font-size:12px;
+  font-weight:900;
+  color:var(--muted);
+}
+.dropItem{
+  display:block;
+  padding:10px 12px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:800;
+  color:var(--text);
+}
+.dropItem:hover{background:#f1f5f9}
+.dropSep{height:1px;background:rgba(226,232,240,.9);margin:6px 6px}
+
+    
     .menuBtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;border:1px solid var(--line);background:#fff;box-shadow:0 1px 2px rgba(15,23,42,.05);cursor:pointer}
     .menuBtn svg{width:20px;height:20px}
 
