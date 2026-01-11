@@ -1,14 +1,23 @@
 :root{
-  --bg:#f8fafc; --card:#ffffff; --muted:#64748b; --text:#0f172a; --line:#e2e8f0;
+  /* 地圖色系：沙/紙/鼠尾草 + 青銅 */
+  --bg:#FEFAE0;        /* 玉米鬚：全站背景 */
+  --card:#ffffff;      /* 卡片保持白，閱讀最清楚 */
+  --muted:#6B6B5F;     /* 柔和灰綠 */
+  --text:#2F2A24;      /* 深棕黑：像地圖印刷墨色 */
+  --line:#E3DCCB;      /* 溫暖邊線 */
 
-  --brand:#0F766E;
-  --brand2:#115E59;
-  --accent:#F59E0B;
+  --paper:#E9EDC9;     /* 米色：區塊底 */
+  --sand:#FAEDCD;      /* 木瓜酥：hover/淡底 */
+
+  --brand:#8A634B;     /* 深青銅：主色（按鈕/LOGO） */
+  --brand2:#6B4B37;    /* 更深：hover */
+  --accent:#CCD5AE;    /* 乾燥鼠尾草：點綴 */
 
   --ok:#16a34a;
   --shadow: 0 1px 2px rgba(15,23,42,.06), 0 12px 30px rgba(15,23,42,.08);
   --r: 18px;
 }
+
 
 *{box-sizing:border-box}
 body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;background:var(--bg);color:var(--text)}
