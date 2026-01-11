@@ -77,9 +77,40 @@ h2{margin:10px 0 0;font-size:26px;letter-spacing:-.02em}
 
 /* Sections / cards */
 .section{padding:14px 0 26px}
-.grid{display:grid;gap:12px;grid-template-columns:1fr}
-.card{background:#fff;border:1px solid var(--line);border-radius:calc(var(--r) + 8px);box-shadow:var(--shadow);padding:16px}
-.card h3{margin:0 0 10px;font-size:15px;font-weight:1000}
+/* Quick cards（快速入口卡片） */
+.sectionTitle{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.sectionTitle h3{margin:0;font-size:16px;letter-spacing:-.01em}
+.sectionTitle p{margin:6px 0 0;font-size:13px;color:var(--muted)}
+
+.cards{
+  display:grid;
+  gap:12px;
+  margin-top:12px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+/* 重要：card 可能用在 <a>，一定要讓它變成 block/grid */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:calc(var(--r) + 8px);
+  box-shadow:var(--shadow);
+  padding:16px;
+
+  display:grid;      /* ✅ 讓 <a class="card"> 也能正常 */
+  gap:10px;
+}
+
+.cardTop{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.cardName{font-weight:900}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  border-radius:999px;border:1px solid var(--line);
+  background:#fff;padding:6px 10px;font-size:12px;
+  color:var(--muted);font-weight:900;white-space:nowrap
+}
+.cardDesc{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+
 .muted{color:var(--muted);font-size:13px;line-height:1.7}
 .list{margin:0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.75}
 .list b{color:var(--text)}
