@@ -208,4 +208,10 @@ footer{border-top:1px solid rgba(226,232,240,.9);background:#fff}
   .menuBtn{display:none}
   .grid{grid-template-columns:1fr 1fr}
   h2{font-size:34px}
+
+  /* ✅ 加這兩行：讓好站推薦變 5 欄、聯絡資訊變左右兩欄 */
+  .siteGrid{grid-template-columns:repeat(5, minmax(0, 1fr))}
+  .infoGrid{grid-template-columns:1.1fr .9fr}
+}
+
 }
